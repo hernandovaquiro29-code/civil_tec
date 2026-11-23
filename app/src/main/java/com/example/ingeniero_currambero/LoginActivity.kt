@@ -28,6 +28,7 @@ class LoginActivity : AppCompatActivity() {
         val tvSubtitle=findViewById<TextView>(R.id.tvSubtitle)
 
         tvSwitch.setOnClickListener {
+            isRegistering=!isRegistering
             if (isRegistering) {
                 tvTitle.text="Crear cuenta"
                 tvSubtitle.text="Regístrate en CIVIL-TEC"

@@ -39,9 +39,9 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:hint="Nombre del proyecto"
-            android:hintTextColor="@color/negro"
+            android:textColorHint="@color/negro"
             android:inputType="textCapSentences"
-            android:TextColor="@color/negro"
+            android:textColor="@color/negro"
             android:padding="16dp"
             android:layout_marginTop="12dp"/>
         <EditText
@@ -49,10 +49,10 @@
             android:layout_width="match_parent"
             android:layout_height="112dp"
             android:hint="Descripción del proyecto"
-            android:hintTextColor="@color/negro"
+            android:textColorHint="@color/negro"
             android:gravity="top"
             android:inputType="textMultiLine"
-            android:TextColor="@color/negro"
+            android:textColor="@color/negro"
             android:padding="16dp"
             android:layout_marginTop="16dp"/>
         <EditText
@@ -60,9 +60,9 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:hint="Presupuesto"
-            android:hintTextColor="@color/negro"
+            android:textColorHint="@color/negro"
             android:inputType="numberDecimal"
-            android:TextColor="@color/negro"
+            android:textColor="@color/negro"
             android:padding="16dp"
             android:layout_marginTop="16dp"/>
         <TextView
@@ -78,9 +78,9 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:hint="Ciudad,dirección o sector"
-            android:hintTextColor="@color/negro"
+            android:textColorHint="@color/negro"
             android:inputType="textCapSentences"
-            android:TextColor="@color/negro"
+            android:textColor="@color/negro"
             android:padding="16dp"
             android:layout_marginTop="8dp"/>
         <TextView
@@ -96,9 +96,9 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:hint="Ej. Vivienda, comercial, industrial, etc"
-            android:hintTextColor="@color/negro"
+            android:textColorHint="@color/negro"
             android:inputType="textCapSentences"
-            android:TextColor="@color/negro"
+            android:textColor="@color/negro"
             android:padding="16dp"
             android:layout_marginTop="8dp"/>
         <TextView
@@ -121,9 +121,9 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:hint="https://etc"
-            android:hintTextColor="@color/negro"
+            android:textColorHint="@color/negro"
             android:inputType="textUri"
-            android:TextColor="@color/negro"
+            android:textColor="@color/negro"
             android:singleLine="true"
             android:padding="16dp"
             android:layout_marginTop="8dp"/>

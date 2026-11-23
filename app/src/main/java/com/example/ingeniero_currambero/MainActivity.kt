@@ -19,6 +19,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
 
@@ -160,11 +161,11 @@ class MainActivity : AppCompatActivity() {
                                         20
                                     )
                                     background=android.graphics.drawable.GradientDrawable().apply {
-                                        setColor(Color.parseColor("@color/azul"))
+                                        setColor(ContextCompat.getColor(this@MainActivity, R.color.blanco))
                                         cornerRadius=24f
                                         setStroke(
                                             2,
-                                            Color.parseColor("@color/amarillo")
+                                            ContextCompat.getColor(this@MainActivity, R.color.amarillo)
                                         )
                                     }
                                 }
@@ -213,6 +214,18 @@ class MainActivity : AppCompatActivity() {
                                     setTextColor(
                                         Color.rgb(20, 43, 74)
                                     )
+                                }
+                            val textUbicacion=
+                                TextView(this@MainActivity).apply {
+                                    text="Ubicación: $ubiPr"
+                                    textSize=15f
+                                    setTextColor(Color.DKGRAY)
+                                }
+                            val textTipoEdi=
+                                TextView(this@MainActivity).apply {
+                                    text="Tipo de edificación: $tipoEdiPr"
+                                    textSize = 15f
+                                    setTextColor(Color.DKGRAY)
                                 }
                             val botonAbrir=
                                 Button(this@MainActivity).apply {
@@ -298,6 +311,8 @@ class MainActivity : AppCompatActivity() {
                             tarjetaProyecto.addView(textNomb)
                             tarjetaProyecto.addView(textDescrip)
                             tarjetaProyecto.addView(textPresu)
+                            tarjetaProyecto.addView(textUbicacion)
+                            tarjetaProyecto.addView(textTipoEdi)
                             tarjetaProyecto.addView(botonAbrir)
                             tarjetaProyecto.addView(botonEditar)
                             tarjetaProyecto.addView(botonEliminar)

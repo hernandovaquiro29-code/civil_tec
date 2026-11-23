@@ -138,7 +138,7 @@ class ProjectFormActivity : AppCompatActivity() {
                 "descripcion" to descrip,
                 "presupuesto" to presu,
                 "ubicacion" to ubicacion,
-                "Tipodeedificaion" to tipoEdi,
+                "tipo_edi" to tipoEdi,
                 "planUrl" to enlacePl
             )
             guardarProyecto(

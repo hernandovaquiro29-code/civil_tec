@@ -108,7 +108,6 @@ class ProjectDetailActivity : AppCompatActivity() {
                     "name",
                     "nombre"
                 )
-
                 textNom.text=
                     nom ?: "Nombre no definido"
 
@@ -118,7 +117,6 @@ class ProjectDetailActivity : AppCompatActivity() {
                     "descrip",
                     "descripcion"
                 )
-
                 textDescrip.text=
                     descrip ?: "Descripción no registrada"
 
@@ -140,22 +138,21 @@ class ProjectDetailActivity : AppCompatActivity() {
                     "Ubicación: ${ubi ?: "No registrada"}"
                 val tipoEdificacion=obtenerTexto(
                     snapshot,
+                    "tipo_edi",
                     "buildingType",
                     "tipoEdificacion",
-                    "tipo_edificacion"
+                    "tipo_edificacion",
+                    "tipodeedificacion"
                 )
                 textTipoEdi.text=
                     "Tipo de edificación: " +
                             (tipoEdificacion ?: "No registrado")
-
                 cargarImagenSegunTipo(tipoEdificacion)
-
                 val imagenUrl=obtenerTexto(
                     snapshot,
                     "imageUrl",
                     "imagenUrl"
                 )
-
                 urlPl=obtenerTexto(
                     snapshot,
                     "planUrl",
