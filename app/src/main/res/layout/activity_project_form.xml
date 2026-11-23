@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nuevo proyecto"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/amarillo"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingresa la información de tu proyecto."
+            android:textSize="16sp"
+            android:textColor="@color/texto_de_input"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INFORMACIÓN GENERAL"
+            android:textColor="@color/azul"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+        <EditText
+            android:id="@+id/etPrnombre"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Nombre del proyecto"
+            android:hintTextColor="@color/negro"
+            android:inputType="textCapSentences"
+            android:TextColor="@color/negro"
+            android:padding="16dp"
+            android:layout_marginTop="12dp"/>
+        <EditText
+            android:id="@+id/etDescrip"
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:hint="Descripción del proyecto"
+            android:hintTextColor="@color/negro"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:TextColor="@color/negro"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/etpresu"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Presupuesto"
+            android:hintTextColor="@color/negro"
+            android:inputType="numberDecimal"
+            android:TextColor="@color/negro"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UBICACIÓN DEL PROYECTO"
+            android:textColor="@color/azul"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"/>
+        <EditText
+            android:id="@+id/etUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Ciudad,dirección o sector"
+            android:hintTextColor="@color/negro"
+            android:inputType="textCapSentences"
+            android:TextColor="@color/negro"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TIPO DE EDIFICACIÓN"
+            android:textColor="@color/azul"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+        <EditText
+            android:id="@+id/etTipoEdi"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Ej. Vivienda, comercial, industrial, etc"
+            android:hintTextColor="@color/negro"
+            android:inputType="textCapSentences"
+            android:TextColor="@color/negro"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PLANOS DEL PROYECTO"
+            android:textColor="@color/azul"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enlace externo del plano."
+            android:textColor="@color/azul"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/etEnlacePl"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="https://etc"
+            android:hintTextColor="@color/negro"
+            android:inputType="textUri"
+            android:TextColor="@color/negro"
+            android:singleLine="true"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnguardarpr"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="GUARDAR PROYECTO"
+            android:textStyle="bold"
+            android:textColor="@color/azul"
+            android:backgroundTint="@color/amarillo"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"/>
+    </LinearLayout>
+</ScrollView>

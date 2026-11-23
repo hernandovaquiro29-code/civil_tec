@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ANÁLISIS ESTRUCTURAL"
+            android:textColor="@color/azul"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecciona el tipo de elemento estructural."
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+        <Button
+            android:id="@+id/btnAnalisisVigas"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="ANÁLISIS DE VIGAS"
+            android:backgroundTint="@color/azul"
+            android:textColor="@color/blanco"/>
+        <Button
+            android:id="@+id/btnAnalisisColumnas"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="ANÁLISIS DE COLUMNAS"
+            android:backgroundTint="@color/azul"
+            android:textColor="@color/blanco"/>
+        <Button
+            android:id="@+id/btnAnalisisPorticos"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="ANÁLISIS DE PÓRTICOS"
+            android:backgroundTint="@color/azul"
+            android:textColor="@color/blanco"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:id="@+id/contenedorVigas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ANÁLISIS DE VIGAS"
+                android:textColor="@color/azul"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo de viga"
+                android:textColor="@color/negro"
+                android:textStyle="bold"/>
+            <RadioGroup
+                android:id="@+id/rgTipoViga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/rbSimplementeApoyada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Simplemente apoyada"
+                    android:textColor="@color/negro"
+                    android:checked="true"/>
+                <RadioButton
+                    android:id="@+id/rbVoladizo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="En voladizo"
+                    android:textColor="@color/negro"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Longitud de la viga (m)"
+                android:textColor="@color/negro"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/etLongitudViga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"
+                android:hint="Ejemplo:6.0"
+                android:textColorHint="@color/negro"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo de carga"
+                android:textColor="@color/negro"
+                android:textStyle="bold"/>
+            <RadioGroup
+                android:id="@+id/rgTipoCargaViga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbCargaPuntual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carga puntual"
+                    android:textColor="@color/negro"
+                    android:checked="true"/>
+                <RadioButton
+                    android:id="@+id/rbCargaDistribuida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carga distribuida uniforme"
+                    android:textColor="@color/negro"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Magnitud de la carga (kN o kN/m)"
+                android:textColor="@color/negro"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/etMagnitudCargaViga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"
+                android:hint="Ejemplo: 20"
+                android:textColorHint="@color/negro"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Posición de la carga puntual desde el apoyo izquierdo (m)"
+                android:textColor="@color/negro"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/etPosicionCargaViga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"
+                android:hint="Ejemplo:3.0"
+                android:textColorHint="@color/negro"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Módulo de elasticidad E (kN/m²)"
+                android:textColor="@color/negro"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/etModuloElasticidadViga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"
+                android:hint="Valor del material"
+                android:textColorHint="@color/negro"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Momento de inercia I (m⁴)"
+                android:textColor="@color/negro"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/etInerciaViga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"
+                android:hint="Momento de inercia de la sección"
+                android:textColorHint="@color/negro"/>
+            <Button
+                android:id="@+id/btnCalcularViga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CALCULAR VIGA"
+                android:backgroundTint="@color/azul"
+                android:textColor="@color/blanco"
+                android:layout_marginTop="24dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CARGAS ADICIONALES"
+                android:textColor="@color/azul"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agrega las cargas que actúan sobre la viga."
+                android:textColor="@color/negro"
+                android:layout_marginTop="8dp"/>
+            <RadioGroup
+                android:id="@+id/rgNuevaCarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/rbNuevaPuntual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carga puntual"
+                    android:textColor="@color/negro"
+                    android:checked="true"/>
+                <RadioButton
+                    android:id="@+id/rbNuevaDistribuida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carga distribuida"
+                    android:textColor="@color/negro"/>
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/etNuevaMagnitud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Magnitud de la carga"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal|numberSigned"
+                android:textColor="@color/negro"/>
+            <EditText
+                android:id="@+id/etNuevaPosicion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Posición inicial (m)"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"/>
+            <EditText
+                android:id="@+id/etNuevaFinal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Posición final (m), solo distribuida"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"/>
+
+            <Button
+                android:id="@+id/btnAgregarCarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AGREGAR CARGA"
+                android:backgroundTint="@color/azul"
+                android:textColor="@color/blanco"/>
+
+            <LinearLayout
+                android:id="@+id/contenedorListaCargas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/tvResultadoViga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/azul"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contenedorColumnas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ANÁLISIS DE COLUMNAS"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/azul"
+                android:gravity="center"
+                android:padding="16dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Datos geométricos de la columna"
+                android:textColor="@color/negro"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+            <EditText
+                android:id="@+id/etAnchoColumna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ancho de la sección b (m)"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"/>
+            <EditText
+                android:id="@+id/etAltoColumna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Alto de la sección h (m)"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"/>
+            <EditText
+                android:id="@+id/etLongitudColumna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Longitud de la columna L (m)"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Propiedades y cargas"
+                android:textColor="@color/negro"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:layout_marginTop="24dp"/>
+            <EditText
+                android:id="@+id/etCargaAxial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Carga axial P (kN)"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"/>
+            <EditText
+                android:id="@+id/etElasticidadColumna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Módulo de elasticidad E (kN/m²)"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"/>
+            <EditText
+                android:id="@+id/etFactorKColumna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Factor de longitud efectiva K"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"
+                android:text="1.0"/>
+            <Button
+                android:id="@+id/btnCalcularColumna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CALCULAR COLUMNA"
+                android:backgroundTint="@color/azul"
+                android:textColor="@color/blanco"
+                android:layout_marginTop="24dp"/>
+            <TextView
+                android:id="@+id/tvResultadoColumna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aquí aparecerán los resultados"
+                android:textColor="@color/azul"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contenedorPorticos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ANÁLISIS DE PÓRTICOS"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/azul"
+                android:gravity="center"
+                android:padding="16dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Geometría del pórtico"
+                android:textColor="@color/negro"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+            <EditText
+                android:id="@+id/etAlturaPortico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Altura de columnas (m)"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"/>
+            <EditText
+                android:id="@+id/etLuzPortico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Luz de la viga (m)"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Propiedades de los elementos"
+                android:textColor="@color/negro"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:layout_marginTop="24dp"/>
+            <EditText
+                android:id="@+id/etElasticidadPortico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Módulo de elasticidad E (kN/m²)"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"/>
+            <EditText
+                android:id="@+id/etInerciaVigaPortico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Inercia de la viga (m⁴)"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"/>
+            <EditText
+                android:id="@+id/etAreaColumnaPortico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Área transversal de las columnas (m²)"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"/>
+            <EditText
+                android:id="@+id/etAreaVigaPortico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Área transversal de la viga (m²)"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"/>
+            <EditText
+                android:id="@+id/etInerciaColumnaPortico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Inercia de las columnas (m⁴)"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cargas aplicadas"
+                android:textColor="@color/negro"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:layout_marginTop="24dp"/>
+            <EditText
+                android:id="@+id/etCargaDistribuidaPortico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Carga distribuida sobre la viga (kN/m)"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"/>
+            <EditText
+                android:id="@+id/etCargaHorizontalPortico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Carga horizontal (kN)"
+                android:textColorHint="@color/negro"
+                android:inputType="numberDecimal"
+                android:textColor="@color/negro"/>
+            <Button
+                android:id="@+id/btnCalcularPortico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CALCULAR PÓRTICO"
+                android:backgroundTint="@color/azul"
+                android:textColor="@color/blanco"
+                android:layout_marginTop="24dp"/>
+            <TextView
+                android:id="@+id/tvResultadoPortico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aquí aparecerán los resultados"
+                android:textColor="@color/azul"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

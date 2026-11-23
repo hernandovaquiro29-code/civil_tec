@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CIVIL-TEC"
+            android:textColor="@color/azul"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DETERMINACIÓN DE CARGAS"
+            android:textColor="@color/azul"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" CARGA MUERTA (D)"
+            android:textColor="@color/azul"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+        <EditText
+            android:id="@+id/etVolumen"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical"
+            android:hint="Volumen del elemento (m³)"
+            android:textColorHint="@color/negro"
+            android:inputType="numberDecimal"
+            android:textColor="@color/negro"/>
+        <EditText
+            android:id="@+id/etDensidad"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical"
+            android:hint="Peso específico del material (kN/m³)"
+            android:textColorHint="@color/negro"
+            android:inputType="numberDecimal"
+            android:textColor="@color/negro"/>
+        <EditText
+            android:id="@+id/etCargaMuertaAdicional"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical"
+            android:hint="Otras cargas permanentes (kN)"
+            android:textColorHint="@color/negro"
+            android:inputType="numberDecimal"
+            android:textColor="@color/negro"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical"
+            android:text=" CARGA VIVA (L)"
+            android:textColor="@color/azul"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"/>
+        <EditText
+            android:id="@+id/etCarga_viva"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical"
+            android:hint="Carga viva resultante (kN)"
+            android:textColorHint="@color/negro"
+            android:inputType="numberDecimal"
+            android:textColor="@color/negro"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CARGAS DE CUBIERTA"
+            android:textColor="@color/azul"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"/>
+        <EditText
+            android:id="@+id/etCargaCubierta"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical"
+            android:hint="Carga viva de cubierta Lr (kN)"
+            android:textColorHint="@color/negro"
+            android:inputType="numberDecimal"
+            android:textColor="@color/negro"/>
+        <EditText
+            android:id="@+id/etCargaGranizo"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical"
+            android:hint="Carga de granizo G (kN)"
+            android:textColorHint="@color/negro"
+            android:inputType="numberDecimal"
+            android:textColor="@color/negro"/>
+        <EditText
+            android:id="@+id/etCargaLluvia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:hint="Carga de lluvia Le (kN)"
+            android:textColorHint="@color/negro"
+            android:inputType="numberDecimal"
+            android:textColor="@color/negro"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccione la acción de cubierta aplicable:"
+            android:textColor="@color/azul"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgTipoCubierta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/rbNinguna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Ninguna"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/rbLr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Carga viva de cubierta (Lr)"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/rbGranizo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Granizo (G)"
+                android:checked="true"/>
+            <RadioButton
+                android:id="@+id/rbLluvia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Lluvia (Le)"
+                android:checked="true"/>
+        </RadioGroup>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" CARGA DE VIENTO (W)"
+            android:textColor="@color/azul"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"/>
+        <EditText
+            android:id="@+id/etCargaViento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:hint="Efecto de viento del caso analizado (kN)"
+            android:textColorHint="@color/negro"
+            android:inputType="numberDecimal|numberSigned"
+            android:textColor="@color/negro"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" CARGA SÍSMICA (E)"
+            android:textColor="@color/azul"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"/>
+        <EditText
+            android:id="@+id/etCargaSismo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:hint="Efecto sísmico reducido del caso analizado (kN)"
+            android:textColorHint="@color/negro"
+            android:inputType="numberDecimal|numberSigned"
+            android:textColor="@color/negro"/>
+        <Button
+            android:id="@+id/btnCalcularCargas"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="CALCULAR CARGAS"
+            android:textColor="@color/blanco"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/azul"/>
+        <TextView
+            android:id="@+id/tvFormulas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Los resultados aparecerán aquí."
+            android:textColor="@color/azul"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginTop="24dp"/>
+        <TextView
+            android:id="@+id/tvFormula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="COMBINACIONES BÁSICAS NSR-10&#10;&#10;B.2.4-1: 1.4D&#10;&#10;B.2.4-2: 1.2D + 1.6L + 0.5(Lr ó G ó Le)&#10;&#10;B.2.4-3: 1.2D + 1.6(Lr ó G ó Le) + (1.0L ó 0.5W)&#10;&#10;B.2.4-4: 1.2D + 1.0W + 1.0L + 0.5(Lr ó G ó Le)&#10;&#10;B.2.4-5: 1.2D + 1.0E + 1.0L&#10;&#10;B.2.4-6: 0.9D + 1.0W&#10;&#10;B.2.4-7: 0.9D + 1.0E"
+            android:textColor="@color/azul"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"/>
+        <TextView
+            android:id="@+id/tvexplifor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="D: Carga muerta&#10;L: Carga viva&#10;Lr: Carga viva de cubierta&#10;G: Carga de granizo&#10;Le: Carga de lluvia&#10;W: Efecto de viento&#10;E: Efecto sísmico reducido"
+            android:textColor="@color/azul"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+</ScrollView>

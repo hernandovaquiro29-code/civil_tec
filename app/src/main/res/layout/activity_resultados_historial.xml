@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blanco"
+    android:padding="24dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RESULTADOS E HISTORIAL"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/azul"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:id="@+id/tvNomPrHisto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proyecto"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/negro"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cálculos guardados"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/azul"
+        android:layout_marginBottom="8dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:id="@+id/contenHisto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvEstadoHisto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cargando historial"
+                android:textSize="16sp"
+                android:textColor="@color/texto_de_input"
+                android:gravity="center"
+                android:padding="24dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnVolverHisto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VOLVER AL PROYECTO"
+        android:textColor="@color/blanco"
+        android:backgroundTint="@color/azul"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

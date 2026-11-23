@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "845246074884",
+    "firebase_url": "https://ingeniero-currambero-default-rtdb.firebaseio.com",
+    "project_id": "ingeniero-currambero",
+    "storage_bucket": "ingeniero-currambero.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845246074884:android:7c333486f6dae4f0822551",
+        "android_client_info": {
+          "package_name": "com.example.ingeniero_currambero"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg8L6yM_F9QL6aVe5DQ7FAHNKjl5eD7Rg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

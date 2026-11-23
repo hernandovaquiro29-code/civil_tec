@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CIVIL PRO"
+            android:textColor="@color/azul"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ANÁLISIS SÍSMICO Y DINÁMICO"
+            android:textColor="@color/azul"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CARACTERIZACIÓN SÍSMICA"
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UBICACIÓN DEL PROYECTO"
+            android:textColor="@color/azul"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+        <EditText
+            android:id="@+id/etDepartamentoSismico"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Departamento"
+            android:textColorHint="@color/negro"
+            android:inputType="textCapWords"
+            android:textColor="@color/negro"
+            android:padding="8dp"
+            android:layout_marginTop="8dp"/>
+        <EditText
+            android:id="@+id/etMunicipioSismico"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Municipio"
+            android:textColorHint="@color/negro"
+            android:inputType="textCapWords"
+            android:textColor="@color/negro"
+            android:padding="8dp"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PERFIL DEL SUELO"
+            android:textColor="@color/azul"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecciona la clasificación obtenida del estudio geotécnico."
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgPerfilSuelo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <RadioButton
+                android:id="@+id/rbSueloA"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="A"/>
+            <RadioButton
+                android:id="@+id/rbSueloB"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="B"/>
+            <RadioButton
+                android:id="@+id/rbSueloC"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="C"/>
+            <RadioButton
+                android:id="@+id/rbSueloD"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="D"/>
+            <RadioButton
+                android:id="@+id/rbSueloE"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="E"/>
+            <RadioButton
+                android:id="@+id/rbSueloF"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="F"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GRUPO DE USO"
+            android:textColor="@color/azul"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgGrupoUso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <RadioButton
+                android:id="@+id/rbGrupoI"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="I"/>
+            <RadioButton
+                android:id="@+id/rbGrupoII"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="II"/>
+            <RadioButton
+                android:id="@+id/rbGrupoIII"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="III"/>
+            <RadioButton
+                android:id="@+id/rbGrupoIV"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="IV"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="El grupo de uso debe clasificarse según la función y ocupación de la edificación, conforme a la NSR-10."
+            android:textColor="@color/negro"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SISTEMA ESTRUCTURAL"
+            android:textColor="@color/azul"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+        <EditText
+            android:id="@+id/etSistemaEstructural"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:hint="Ej. Pórticos de concreto reforzado"
+            android:textColorHint="@color/negro"
+            android:inputType="textCapSentences"
+            android:textColor="@color/negro"
+            android:padding="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CARACTERÍSTICAS DE LA EDIFICACIÓN"
+            android:textColor="@color/azul"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+        <EditText
+            android:id="@+id/etNumeroPisosSismico"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Número de pisos"
+            android:textColorHint="@color/negro"
+            android:inputType="number"
+            android:textColor="@color/negro"
+            android:padding="8dp"
+            android:layout_marginTop="8dp"/>
+        <EditText
+            android:id="@+id/etAlturaTotalSismico"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Altura total de la edificación (m)"
+            android:textColorHint="@color/negro"
+            android:inputType="numberDecimal"
+            android:textColor="@color/negro"
+            android:padding="8dp"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" FUERZA HORIZONTAL EQUIVALENTE"
+            android:textColor="@color/azul"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SISTEMA DE RESISTENCIA SÍSMICA"
+            android:textColor="@color/azul"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgSistemaPeriodo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/rbSistemaConcreto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Pórticos de concreto reforzado"/>
+            <RadioButton
+                android:id="@+id/rbSistemaAcero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Pórticos de acero estructural"/>
+            <RadioButton
+                android:id="@+id/rbSistemaArriostrado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Pórticos arriostrados de acero con diagonales excéntricas"/>
+            <RadioButton
+                android:id="@+id/rbSistemaMuros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Otros sistemas basados en muros rígidos"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="La selección debe corresponder al sistema estructural real. Los pórticos de concreto o acero de esta clasificación no deben estar restringidos por componentes más rígidos."
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DIRECCIÓN DEL ANÁLISIS"
+            android:textColor="@color/azul"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgDireccionAnalisis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbDireccionX"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Dirección X"/>
+            <RadioButton
+                android:id="@+id/rbDireccionY"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Dirección Y"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PESO SÍSMICO POR NIVEL (kN)"
+            android:textColor="@color/azul"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Introduce un peso por piso, desde el nivel inferior hasta la cubierta. Un valor por línea."
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+        <EditText
+            android:id="@+id/etPesosSismicosNiveles"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="top"
+            android:hint="Ejemplo de formato:&#10;300&#10;270&#10;250"
+            android:textColorHint="@color/negro"
+            android:inputType="textMultiLine"
+            android:textColor="@color/negro"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ALTURA ACUMULADA DE CADA NIVEL (m)"
+            android:textColor="@color/azul"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Introduce la altura medida desde la base de la edificación hasta cada piso, en el mismo orden de los pesos."
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+        <EditText
+            android:id="@+id/etAlturasNiveles"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="top"
+            android:hint="Ejemplo de formato:&#10;3&#10;6&#10;9"
+            android:textColorHint="@color/negro"
+            android:inputType="textMultiLine"
+            android:textColor="@color/negro"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"/>
+        <Button
+            android:id="@+id/btnCalcularFuerzaEquivalente"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="CALCULAR FUERZAS SÍSMICAS"
+            android:textColor="@color/blanco"
+            android:textStyle="bold"
+            android:backgroundTint="@color/azul"
+            android:layout_marginTop="24dp"/>
+        <TextView
+            android:id="@+id/tvResultadoFuerzaEquivalente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Los resultados de las fuerzas sísmicas aparecerán aquí."
+            android:textColor="@color/azul"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:background="@color/blanco"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REGULARIDAD ESTRUCTURAL"
+            android:textColor="@color/azul"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clasificación pendiente de verificar con el diseño estructural."
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgRegularidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Regular"/>
+            <RadioButton
+                android:id="@+id/rbIrregular"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Irregular"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnGuardarDatosSismicos"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="GUARDAR DATOS SÍSMICOS"
+            android:textColor="@color/blanco"
+            android:textStyle="bold"
+            android:backgroundTint="@color/azul"
+            android:layout_marginTop="24dp"/>
+        <TextView
+            android:id="@+id/tvEstadoSismico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Los datos sísmicos del proyecto aún no se han registrado."
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:padding="16dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ESPECTRO DE DISEÑO"
+            android:textColor="@color/azul"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingresa los coeficientes de amenaza sísmica correspondientes al municipio, consultados en el Apéndice A-4 de la NSR-10."
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+        <EditText
+            android:id="@+id/etAaSismico"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Aa - Aceleración pico efectiva"
+            android:textColorHint="@color/negro"
+            android:inputType="numberDecimal"
+            android:textColor="@color/negro"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/etAvSismico"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Av - Velocidad pico efectiva"
+            android:textColorHint="@color/negro"
+            android:inputType="numberDecimal"
+            android:textColor="@color/negro"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="El período debe corresponder al modo de vibración que se está evaluando."
+            android:textColor="#64748B"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"/>
+        <EditText
+            android:id="@+id/etPeriodoSismico"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Período de vibración T (segundos)"
+            android:textColorHint="@color/negro"
+            android:inputType="numberDecimal"
+            android:textColor="@color/negro"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"/>
+        <CheckBox
+            android:id="@+id/cbModoNoFundamental"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Modo diferente al fundamental (análisis dinámico)"
+            android:textColor="@color/azul"
+            android:layout_marginTop="16dp"/>
+        <Button
+            android:id="@+id/btnCalcularEspectro"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="CALCULAR ESPECTRO"
+            android:textColor="@color/blanco"
+            android:textStyle="bold"
+            android:backgroundTint="@color/azul"
+            android:layout_marginTop="24dp"/>
+        <TextView
+            android:id="@+id/tvResultadoEspectro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Los resultados del espectro aparecerán aquí."
+            android:textColor="@color/azul"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:background="@color/blanco"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"/>
+    </LinearLayout>
+</ScrollView>

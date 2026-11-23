@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="negro">#FF000000</color>
+    <color name="azul">#142B4A</color>
+    <color name="amarillo">#F2B705</color>
+    <color name="texto_de_input">#687589</color>
+    <color name="verde">#008F39</color>
+    <color name="rojo">#BB0E22</color>
+    <color name="blanco">#FFFFFFFF</color>
+    <color name="gris_claro">#E2DDDD</color>
+</resources>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp"
+            android:background="@color/azul">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CIVIL-TEC"
+                android:textColor="@color/amarillo"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="INGENIERÍA CIVIL"
+                android:textColor="@color/blanco"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cálculos estructurales"
+            android:textColor="@color/azul"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecciona el módulo que deseas utilizar para analizar tu proyecto."
+            android:textColor="@color/negro"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/blanco"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" DETERMINACIÓN DE CARGAS"
+                android:textColor="@color/azul"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Identifica y calcula las cargas que actúan sobre los elementos estructurales."
+                android:textColor="@color/negro"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"/>
+            <Button
+                android:id="@+id/btnCargas"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="ABRIR MÓDULO  ›"
+                android:textColor="@color/azul"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/verde"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/blanco"
+            android:elevation="8dp"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" ANÁLISIS SÍSMICO Y DINÁMICO"
+                android:textColor="@color/azul"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Evalúa parámetros sísmicos, espectros y fuerzas laterales del proyecto."
+                android:textColor="@color/negro"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"/>
+            <Button
+                android:id="@+id/btnSismico"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="ABRIR MÓDULO  ›"
+                android:textColor="@color/azul"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/rojo"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/blanco"
+            android:elevation="4dp"
+            android:layout_marginBottom="24dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" ANÁLISIS ESTRUCTURAL"
+                android:textColor="@color/azul"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estudia el comportamiento de vigas, columnas y pórticos."
+                android:textColor="@color/negro"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"/>
+            <Button
+                android:id="@+id/btnEstructura"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="ABRIR MÓDULO  ›"
+                android:textColor="@color/azul"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/amarillo"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
